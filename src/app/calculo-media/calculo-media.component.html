@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Média</title>
+</head>
+<body>
+    <div>
+        <h2>Calculadora de Média</h2>
+        <div>
+          <label for="ac1">AC1:</label>
+          <input type="number" [(ngModel)]="ac1" id="ac1">
+        </div>
+        <div>
+          <label for="ac2">AC2:</label>
+          <input type="number" [(ngModel)]="ac2" id="ac2">
+        </div>
+        <div>
+          <label for="ag">AG:</label>
+          <input type="number" [(ngModel)]="ag" id="ag">
+        </div>
+        <div>
+          <label for="af">AF:</label>
+          <input type="number" [(ngModel)]="af" id="af">
+        </div>
+        <button (click)="calcularMedia()">Calcular</button>
+        <div *ngIf="media !== null">
+          <p>Média: {{ media }}</p>
+          <p *ngIf="media >= 5">Aprovado!</p>
+          <p *ngIf="media < 5">Reprovado!</p>
+        </div>
+    </div>      
+</body>
+</html>
