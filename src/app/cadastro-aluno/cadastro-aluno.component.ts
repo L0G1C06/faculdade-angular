@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './cadastro-aluno.component.css'
 })
 export class CadastroAlunoComponent {
-
+  aluno = {
+    ra: '',
+    nome: '',
+    email: '',
+    celular: ''
+  };
 }
