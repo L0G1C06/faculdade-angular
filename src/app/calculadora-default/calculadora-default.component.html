@@ -1,1 +1,37 @@
-<p>calculadora-default works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Default</title>
+</head>
+<body>
+    <div>
+        <h2>Calculadora de Operações matemáticas básicas</h2>
+        <div>
+            <label for="x">X:</label>
+            <input type="number" [(ngModel)]="x" id="x">
+        </div>
+        <div>
+            <label for="y">Y:</label>
+            <input type="number" [(ngModel)]="y" id="y">
+        </div>
+        <div>
+            <label for="operacao">Operação:</label>
+            <select [(ngModel)]="operacao" id="operacao">
+                <option value="soma">Soma</option>
+                <option value="subtracao">Subtração</option>
+                <option value="multiplicacao">Multiplicação</option>
+                <option value="divisao">Divisão</option>
+            </select>
+        </div>
+        <div>
+            <button (click)="calcular()">Calcular</button>
+        </div>
+        <div>
+            <label for="resultado">Resultado:</label>
+            <input type="text" id="resultado" [(ngModel)]="resultado" readonly>
+        </div>
+    </div>
+</body>
+</html>
